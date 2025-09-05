@@ -1,3 +1,7 @@
 https://www.kaggle.com/code/cdabakoglu/heart-disease-classifications-machine-learning/notebook
 
-https://www.kaggle.com/code/oktayrdeki/heart-disease-prediction-eda-ml-accuracy-80/notebook
+https://www.kaggle.com/code/oktayrdeki/heart-disease-prediction-eda-ml-accuracy-80/notebook、
+
+
+scite.ai
+
