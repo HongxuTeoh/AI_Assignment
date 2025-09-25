@@ -79,19 +79,24 @@ st.write("Enter patient information:")
 # Ask for patient info
 
 # 1. Age
+st.subheader("Age Information")
 age = st.number_input("Patient Age: ",
                       min_value=0, 
                       max_value=120, 
                       step=1)
 st.write(f"Patient Age: {age}")
+st.write("---")
 
 # 2. Sex (gender)
+st.subheader("Gender Information")
 gender = st.radio("Patient Gender: ", ["Male", "Female"],)
 sex_map = {"Male": 1, "Female": 2}
 sex = sex_map[gender]
 st.write(f"Patient Gender as: {gender}")
+st.write("---")
 
 # 3. User selects chest pain type
+st.subheader("Chest Pain Type Information")
 cp_map = {
     "Typical Angina (TA)": 1,
     "Atypical Angina (ATA)": 2,
@@ -101,8 +106,10 @@ cp_map = {
 cp_choice = st.radio("Select Chest Pain Type:", list(cp_map.keys()))
 chest_pain = cp_map[cp_choice]
 st.write(f"Patient chest pain type as: {cp_choice}")
+st.write("---")
 
 # 4. RestingBP (Resting Blood Pressure)
+st.subheader("Resting Blood Pressure Information")
 resting_bp = st.number_input(
     "RestingBP (mm Hg):", 
     min_value=0,   # lower bound
@@ -110,8 +117,10 @@ resting_bp = st.number_input(
     step=1
 )
 st.write(f"Patient Resting Blood Pressure: {resting_bp} mm Hg")
+st.write("---")
 
 # 5. Cholesterol
+st.subheader("Cholesterol Information")
 cholesterol = st.number_input(
     "Cholesterol (mg/dl):",
     min_value=0,
@@ -119,17 +128,21 @@ cholesterol = st.number_input(
     step=1
 )
 st.write(f"Patient Cholesterol: {cholesterol} mg/dl")
+st.write("---")
 
 # 6. FastingBS (Fasting Blood Sugar)
+st.subheader("Fasting Blood Pressure Information")
 fBS_map = {
     "FastingBS more than or equal to 120": 1,
     "FastingBS less than 120": 0
 }
-fBS_choice = st.radio("Patient Resting Blood Pressure (RestingBP):", list(fBS_map.keys()))
+fBS_choice = st.radio("Patient Fasting Blood Pressure (FastingBS):", list(fBS_map.keys()))
 fasting_bs = fBS_map[fBS_choice]
-st.write(f"Patient Resting Blood Pressure as: {fBS_choice}")
+st.write(f"Patient Fasting Blood Pressure as: {fBS_choice}")
+st.write("---")
 
 # 7. RestingECG (Resting Electrocardiogram Results)
+st.subheader("Resting Electrocardiogram Information")
 resting_ecg_map = {
     "Normal": 1,
     "ST-T Wave Abnormality (ST)": 2,
@@ -138,8 +151,10 @@ resting_ecg_map = {
 ecg_choice = st.radio("RestingECG:", list(resting_ecg_map.keys()))
 resting_ecg = resting_ecg_map[ecg_choice]
 st.write(f"Patient Resting Electrocardiogram Results: {ecg_choice}")
+st.write("---")
 
 # 8. MaxHR (Maximum Heart Rate Achieved)
+st.subheader("Maximum Heart Rate Information")
 max_hr = st.number_input(
     "MaxHR (beats per minute):", 
     min_value=0,   # approximate lower bound
@@ -147,14 +162,18 @@ max_hr = st.number_input(
     step=1
 )
 st.write(f"Patient Maximum Heart Rate Achieved: {max_hr}")
+st.write("---")
 
 # 9. ExerciseAngina (Exercise-Induced Angina)
+st.subheader("Exercise-Induced Angina Information")
 angina_map = {"Yes": 1, "No": 2}
 angina_choice = st.radio("Exercise Angina:", ["Yes", "No"])
 exercise_angina = angina_map[angina_choice]
 st.write(f"Patient with Exercise-Induced Angina: {angina_choice}")
+st.write("---")
 
 # 10. Oldpeak (ST depression induced by exercise relative to rest)
+st.subheader("Oldpeak Information")
 oldpeak = st.number_input(
     "Oldpeak (ST depression/elevation relative to rest):",
     min_value=-10.0,
@@ -163,8 +182,10 @@ oldpeak = st.number_input(
     format="%.1f"
 )
 st.write(f"Patient Oldpeak: {oldpeak}")
+st.write("---")
 
 # 11. ST_Slope (Slope of the peak exercise ST segment)
+st.subheader("Slope of the peak exercise ST segment Information")
 st_slope_map = {
     "Up sloping (normal)": 1,
     "Flat (possible ischemia)": 2,
@@ -172,7 +193,9 @@ st_slope_map = {
 }
 slope_choice = st.radio("ST Slope:", list(st_slope_map.keys()))
 st_slope = st_slope_map[slope_choice]
-st.write(f"Patient Slstope of the peak exercise ST segment as: {slope_choice}")
+st.write(f"Patient stope of the peak exercise ST segment as: {slope_choice}")
+st.write("---")
+
 
 
 patient_data = [age, sex, chest_pain, resting_bp, cholesterol, fasting_bs, resting_ecg, max_hr, exercise_angina, oldpeak, st_slope]
